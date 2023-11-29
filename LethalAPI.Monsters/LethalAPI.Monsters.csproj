@@ -6,7 +6,7 @@
         <RootNamespace>LethalAPI.Monsters</RootNamespace>
         <Company>Lethal Company Modding Community</Company>
         <Authors>Lethal Company Modding Community</Authors>
-        <Description>A LethalAPI framework for monsters.</Description>
+        <Description>Monster-related functionality for LethalAPI.</Description>
         <Version>0.0.01</Version>
         <FileVersion>0.0.01</FileVersion>
         <AssemblyVersion>0.0.01</AssemblyVersion>

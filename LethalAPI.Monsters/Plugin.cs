@@ -1,6 +1,7 @@
-﻿namespace LethalAPI.Monsters;
+namespace LethalAPI.Monsters;
 
 using System;
+
 using LethalAPI.Core;
 
 /// <inheritdoc />
