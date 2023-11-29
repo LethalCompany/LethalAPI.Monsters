@@ -11,6 +11,7 @@ using System;
 
 using Core;
 using Features;
+using Interfaces;
 using UnityEngine;
 
 /// <summary>
@@ -18,7 +19,7 @@ using UnityEngine;
 /// </summary>
 /// <typeparam name="TBase">The type of the hazard being represented.</typeparam>
 /// <typeparam name="THazard">The implementing type.</typeparam>
-public abstract class Hazard<TBase, THazard> : TypeCastObject<THazard>
+public abstract class Hazard<TBase, THazard> : TypeCastObject<THazard>, ITransform
     where THazard : class
     where TBase : class
 {
@@ -70,4 +71,21 @@ public abstract class Hazard<TBase, THazard> : TypeCastObject<THazard>
     /// Gets or sets the GameObject of the base instance.
     /// </summary>
     public GameObject GameObject { get; protected set; } = null!;
+
+    /// <inheritdoc />
+    public abstract Transform Transform { get; }
+
+    /// <inheritdoc />
+    public Vector3 Position
+    {
+        get => Transform.position;
+        set => Transform.position = value;
+    }
+
+    /// <inheritdoc />
+    public Quaternion Rotation
+    {
+        get => Transform.rotation;
+        set => Transform.rotation = value;
+    }
 }
