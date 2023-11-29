@@ -12,7 +12,7 @@ using System;
 using LethalAPI.Core;
 
 /// <inheritdoc />
-public sealed class Plugin : LethalAPI.Core.Features.Plugin<Config>
+public sealed class Plugin : Core.Features.Plugin<Config>
 {
     /// <summary>
     /// Gets the main <see cref="Plugin"/> instance.

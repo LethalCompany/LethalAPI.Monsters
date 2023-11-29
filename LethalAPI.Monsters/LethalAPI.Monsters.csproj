@@ -22,7 +22,7 @@
         <DebugType>embedded</DebugType>
         <OutputPath>..\bin\Release\</OutputPath>
         <DocumentationFile>..\bin\Release\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-        <CodeAnalysisRuleSet>Resources\LethalAPI.ruleset</CodeAnalysisRuleSet>
+        <CodeAnalysisRuleSet>..\LethalAPI.ruleset</CodeAnalysisRuleSet>
         <RestoreAdditionalProjectSources>
             https://api.nuget.org/v3/index.json;
             https://nuget.bepinex.dev/v3/index.json

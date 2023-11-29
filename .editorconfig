@@ -45,6 +45,9 @@ dotnet_diagnostic.CS8618.severity = error
 
 # CS8776: Member cannot be used in this attribute.
 dotnet_diagnostic.CS8776.severity = error
+
+resharper_redundant_name_qualifier_highlighting = none
+
 csharp_using_directive_placement = inside_namespace:warning
 csharp_prefer_simple_using_statement = true:warning
 # csharp_prefer_braces = true:suggestion
