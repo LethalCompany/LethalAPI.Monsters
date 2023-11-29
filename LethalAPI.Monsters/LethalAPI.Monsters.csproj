@@ -38,6 +38,8 @@
         <Content Include="..\LethalAPI.ruleset" Link="Resources/LethalAPI.ruleset"/>
         <Content Include="..\LICENSE" Link="Resources/LICENSE"/>
         <Content Include="..\README.md" Link="Resources/README.md"/>
+        <None Remove="NuGet.Config" />
+        <None Include="NuGet.Config" Link="Resources/NuGet.Config"/>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Fody" Version="6.8.0" IncludeAssets="runtime; compile; build; native; contentfiles; analyzers; buildtransitive" PrivateAssets="all" ExcludeAssets="runtime" />
