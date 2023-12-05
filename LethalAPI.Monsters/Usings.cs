@@ -8,3 +8,4 @@
 // ReSharper disable RedundantUsingDirective.Global
 #pragma warning disable SA1200 // File should appear in namespace declaration.
 global using Log = LethalAPI.Core.Log;
+global using Vector3 = UnityEngine.Vector3;
