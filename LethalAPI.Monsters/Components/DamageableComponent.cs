@@ -7,17 +7,17 @@
 
 namespace LethalAPI.Monsters.Components;
 
-using Enums;
+using Features;
 using Interfaces;
 using UnityEngine;
 
 /// <summary>
 /// Contains the implementation for damageing a player.
 /// </summary>
-public class DamageableComponent : Component, IDamageable
+public class DamageableComponent : MonoBehaviour, IDamageable
 {
     /// <inheritdoc />
-    public virtual void OnDamaged(float damage, DamageType damageType)
+    public virtual void OnDamaged(DamageInfo damageInfo)
     {
     }
 }

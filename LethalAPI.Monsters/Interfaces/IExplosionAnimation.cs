@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="IDamageable.cs" company="LethalAPI Modding Community">
+// <copyright file="IExplosionAnimation.cs" company="LethalAPI Modding Community">
 // Copyright (c) LethalAPI Modding Community. All rights reserved.
 // Licensed under the LGPL-3.0 license.
 // </copyright>
@@ -7,16 +7,14 @@
 
 namespace LethalAPI.Monsters.Interfaces;
 
-using Features;
-
 /// <summary>
-/// Allows damaging an object.
+/// Contains the triggers for explosion animations.
 /// </summary>
-public interface IDamageable
+public interface IExplosionAnimation
 {
     /// <summary>
-    /// Triggered when the item is damaged.
+    /// Triggers an explosion animation.
     /// </summary>
-    /// <param name="damageInfo">Contains the damage information.</param>
-    public void OnDamaged(DamageInfo damageInfo);
+    /// <param name="position">The position to play the animation at.</param>
+    public void TriggerAnimation(Vector3 position);
 }

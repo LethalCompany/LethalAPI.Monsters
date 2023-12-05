@@ -54,6 +54,7 @@ public class Plugin : LethalAPI.Core.Features.Plugin<Config>
         }
 
         Instance = this;
+        Harmony.PatchAll();
         Log.Debug($"Started {this.Name} successfully.");
     }
 }

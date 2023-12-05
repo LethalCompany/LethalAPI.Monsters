@@ -93,4 +93,8 @@
     <Compile Remove="System/*" />
     <Compile Include="System/*" Visible="False" />
 </ItemGroup>
+
+<ItemGroup>
+  <Folder Include="Enums\" />
+</ItemGroup>
 </Project>
