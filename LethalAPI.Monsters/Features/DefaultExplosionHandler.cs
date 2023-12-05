@@ -71,7 +71,11 @@ public class DefaultExplosionHandler : IExplosionHandler
     {
         foreach (DamageInfo damageHandler in damageHandlers)
         {
-            damageHandler.Damageable.OnDamaged(damageHandler.Damage, DamageType.Explosion);
+            float damage = damageHandler.Damage;
+            if (damageHandler.Damageable is DamageableEnemyComponent)
+                damage *= 2;
+
+            damageHandler.Damageable.OnDamaged(damage, DamageType.Explosion);
         }
     }
 }
