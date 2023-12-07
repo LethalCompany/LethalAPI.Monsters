@@ -17,9 +17,9 @@ using UnityEngine;
 public sealed class DamageablePlayerComponent : DamageableComponent
 {
     /// <summary>
-    /// Gets or sets the player this instance is attached to.
+    /// Gets the player this instance is attached to.
     /// </summary>
-    private PlayerControllerB Player { get; set; } = null!;
+    public PlayerControllerB Player { get; private set; } = null!;
 
     /// <inheritdoc />
     public override void OnDamaged(DamageInfo damageInfo)

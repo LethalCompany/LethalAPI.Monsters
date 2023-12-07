@@ -14,9 +14,9 @@ using MEC;
 public class DamageableMineComponent : DamageableComponent
 {
     /// <summary>
-    /// Gets or sets the mine tied to this instance.
+    /// Gets the mine tied to this instance.
     /// </summary>
-    private Landmine Mine { get; set; } = null!;
+    public Landmine Mine { get; private set; } = null!;
 
     /// <inheritdoc />
     public override void OnDamaged(DamageInfo damageInfo)

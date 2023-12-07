@@ -20,9 +20,9 @@ public sealed class DamageableEnemyComponent : DamageableComponent
     private const float ForceMultiplier = 0.1f;
 
     /// <summary>
-    /// Gets or sets the enemy that this instance represents.
+    /// Gets the enemy that this instance represents.
     /// </summary>
-    private EnemyAI Enemy { get; set; } = null!;
+    public EnemyAI Enemy { get; private set; } = null!;
 
     /// <inheritdoc />
     public override void OnDamaged(DamageInfo damageInfo)
