@@ -1,14 +1,44 @@
-﻿using BepInEx;
+// -----------------------------------------------------------------------
+// <copyright file="Plugin.cs" company="LethalAPI Modding Community">
+// Copyright (c) LethalAPI Modding Community. All rights reserved.
+// Licensed under the LGPL-3.0 license.
+// </copyright>
+// -----------------------------------------------------------------------
 
-namespace LethalAPI.Monsters
+namespace LethalAPI.Monsters;
+
+using System;
+
+using LethalAPI.Core;
+
+/// <inheritdoc />
+public sealed class Plugin : Core.Features.Plugin<Config>
 {
-    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
-    public class Plugin : BaseUnityPlugin
+    /// <summary>
+    /// Gets the main <see cref="Plugin"/> instance.
+    /// </summary>
+    public static Plugin Instance { get; private set; } = null!;
+
+    /// <inheritdoc />
+    public override string Name => "LethalAPI-Monsters";
+
+    /// <inheritdoc />
+    public override string Description => "Contains Monsters & Bestiary APIs.";
+
+    /// <inheritdoc />
+    public override string Author => "Lethal API Modding Community";
+
+    /// <inheritdoc />
+    public override Version Version => new Version(0, 0, 01);
+
+    /// <inheritdoc />
+    public override void OnEnabled()
     {
-        private void Awake()
+        if (!this.Config.IsEnabled)
         {
-            // Plugin startup logic
-            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+            return;
         }
+
+        Log.Info($"{this.Name} is being loaded...");
     }
 }
